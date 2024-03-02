@@ -63,4 +63,4 @@ View file
 </body>
 </html>
 ```
-In this example, when a request is made to "/hello", the hello() method in the HelloController class is invoked. It creates a Message object with the content "Hello, World!" and adds it to the model. The view file "hello.html" then renders this message. The ${message.content} syntax in the JSP file accesses the content of the Message object from the model.
+In this example, when a request is made to "/hello", the hello() method in the HelloController class is invoked. It creates a Message object with the content "Hello, World!" and adds it to the model. The view file "hello.html" then renders this message. The ${message.content} syntax accesses the content of the Message object from the model.
