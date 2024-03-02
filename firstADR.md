@@ -59,7 +59,7 @@ View file
     <title>Hello World</title>
 </head>
 <body>
-    <h1>${message.content}</h1>
+    <h1 th:text="${message.content}"></h1>
 </body>
 </html>
 ```
