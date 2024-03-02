@@ -23,7 +23,7 @@ Spring MVC has high complexity to develop the applications using this pattern.
 
 # Sample Code:
 
-//model class
+Model class
 ```java
 public class Message {
     private String content;
@@ -37,7 +37,7 @@ public class Message {
     }
 }
 ```
-//controller class
+Controller class
 ```
 @Controller
 public class HelloController {
@@ -51,7 +51,7 @@ public class HelloController {
     }
 }
 ```
-//view file
+View file
 ```html
 <!DOCTYPE html>
 <html>
@@ -63,3 +63,4 @@ public class HelloController {
 </body>
 </html>
 ```
+In this example, when a request is made to "/hello", the hello() method in the HelloController class is invoked. It creates a Message object with the content "Hello, World!" and adds it to the model. The view file "hello.jsp" then renders this message. The ${message.content} syntax in the JSP file accesses the content of the Message object from the model.
