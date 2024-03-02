@@ -2,7 +2,7 @@
 # Title: Selecting Django as the Web Framework
 
 # Context:
-We encountered manual Configuration, tight coupling, scability concerns and testing challenges in our web application development.
+We have encountered manual configuration, tight coupling in codes, scability concerns and testing challenges in our previous web application development.
 
 # Decision:
 After careful consideration, we have decided to adopt Spring MVC as the web framework for our project.
