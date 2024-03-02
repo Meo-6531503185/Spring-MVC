@@ -1,41 +1,42 @@
-# Title: Choosing PostgreSQL as the Database Engine for Django Projects
+# Title: Introducing RESTful API with Spring MVC
 
 # Context:
-As we begin development on our Django project, we must make a crucial decision regarding the database engine to use.
+Our application needs to expose its functionality via a web API to allow integration with external systems or client applications. We need a robust and scalable solution to implement RESTful APIs that adhere to best practices and industry standards.
 
 # Decision:
-After thorough consideration, we have opted to utilize PostgreSQL as the primary database engine for our Django project.
+After thorough consideration, we have opted to utilize PostgreSQL as the primary database engine for our We propose extending our Spring MVC application to include RESTful API endpoints using Spring's support for building RESTful web services. This involves creating dedicated controllers to handle HTTP requests and responses in a RESTful manner, utilizing annotations such as @RestController, @GetMapping, @PostMapping, etc.
 
 # Rationale:
-PostgreSQL offers a robust feature set, including support for advanced data types, indexing, and transactions, aligning well with the demands of modern web applications. Its adherence to ACID principles ensures data integrity and reliability, crucial for our project's success. Furthermore, PostgreSQL's seamless integration with Django, extensive documentation, and vibrant community support make it an ideal choice for ensuring scalability, performance, and maintainability as our project evolves.
+Scalability: Spring MVC's modular architecture and support for asynchronous processing allow us to build scalable and high-performance RESTful APIs capable of handling a large number of concurrent requests.
 
 # Consequences
 
 # Pros:
 
-ACID compliance guarantees data integrity and reliability.
-Rich feature set supports diverse application requirements.
-Seamless integration with Django ensures compatibility and ease of development.
-Extensive community support and documentation provide resources for troubleshooting and optimization.
+Integration: Spring MVC seamlessly integrates with other components of the Spring ecosystem, allowing us to leverage additional features such as security, data access, and dependency injection.
 
 # Cons:
 
-Requires expertise in database administration for optimal performance tuning and maintenance.
-Higher resource requirements compared to lighter database engines may necessitate additional infrastructure considerations.
+
+API Versioning: Managing API versioning and backward compatibility can be challenging, requiring careful planning and implementation to avoid breaking changes.
 
 # Sample Code:
 
+```java
+@RestController
+@RequestMapping("/api")
+public class ApiController {
 
-from django.db import models
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
 
-class Customer(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        indexes = [
-            models.Index(fields=['name']),
-            models.Index(fields=['created_at']),
-        ] 
+    @PostMapping("/echo")
+    public String echo(@RequestBody String message) {
+        return message;
+    }
+}
+```
+In this example, the ApiController defines two endpoints: /api/hello for handling GET requests and /api/echo for handling POST requests. The @RestController annotation indicates that this class is a RESTful controller, and the @GetMapping and @PostMapping annotations specify the HTTP methods for the corresponding endpoints.
         
