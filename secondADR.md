@@ -21,7 +21,21 @@ Integration: Spring MVC seamlessly integrates with other components of the Sprin
 API Versioning: Managing API versioning and backward compatibility can be challenging, requiring careful planning and implementation to avoid breaking changes.
 
 # Sample Code:
+Model
+```java
+public class Message {
+    private String content;
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+}
+```
+Controller
 ```java
 @RestController
 @RequestMapping("/api")
@@ -37,6 +51,18 @@ public class ApiController {
         return message;
     }
 }
+```
+```java
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Page</title>
+</head>
+<body>
+    <h1>Hello Page</h1>
+    <p th:text="${message.content}"></p>
+</body>
+</html>
 ```
 In this example, the ApiController defines two endpoints: /api/hello for handling GET requests and /api/echo for handling POST requests. The @RestController annotation indicates that this class is a RESTful controller, and the @GetMapping and @PostMapping annotations specify the HTTP methods for the corresponding endpoints.
         
