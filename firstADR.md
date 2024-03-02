@@ -25,21 +25,15 @@ Spring MVC has high complexity to develop the applications using this pattern.
 
 //model class
 ```java
-public class Hello {
-    private String message;
-    public Hello(){
+public class Message {
+    private String content;
 
-    }
-    public Hello(String message){
-        this.message = message;
+    public String getContent() {
+        return content;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setContent(String content) {
+        this.content = content;
     }
 }
 ```
@@ -47,13 +41,14 @@ public class Hello {
 ```
 @Controller
 public class HelloController {
-   @GetMapping("/hello")
-    public String hello(Model model){
-       Hello content = new Hello();
-       content.setMessage("Hello World");
-       model.addAttribute("message", content);
-       return "hello";
-   }
+
+    @GetMapping("/hello")
+    public String hello(Model model) {
+        Message message = new Message();
+        message.setContent("Hello, World!");
+        model.addAttribute("message", message);
+        return "hello";
+    }
 }
 ```
 //view file
