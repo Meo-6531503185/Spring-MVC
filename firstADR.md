@@ -2,7 +2,8 @@
 # Title: Selecting Django as the Web Framework
 
 # Context:
-Our company is embarking on the development of a new web application to streamline our internal processes and enhance customer experience. We need to choose a suitable web framework to kickstart this project.
+We choose Spring MVC because it offers building web applications with clear separation of concerns,
+integrating with other Spring features and developing complex applications with a focus on maintainability.
 
 # Decision:
 After careful deliberation, we have decided to adopt Django as the web framework for our project.
