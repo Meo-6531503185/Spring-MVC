@@ -41,6 +41,7 @@ public class Hello {
         this.message = message;
     }
 }
+
 //controller class
 @Controller
 public class HelloController {
@@ -52,6 +53,7 @@ public class HelloController {
        return "hello";
    }
 }
+
 //view file
 <!DOCTYPE html>
 <html>
