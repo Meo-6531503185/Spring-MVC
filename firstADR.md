@@ -2,11 +2,10 @@
 # Title: Selecting Django as the Web Framework
 
 # Context:
-We choose Spring MVC because it offers building web applications with clear separation of concerns,
-integrating with other Spring features and developing complex applications with a focus on maintainability.
+We encountered manual Configuration, tight coupling, scability concerns and testing challenges in our web application development.
 
 # Decision:
-After careful deliberation, we have decided to adopt Django as the web framework for our project.
+After careful consideration, we have decided to adopt Spring MVC as the web framework for our project.
 
 # Rationale: Why do we choose this solution?
 We choose Spring MVC for my web application because it offers a mature and well-supported framework with flexible configuration options and a clear separation of concerns through the MVC pattern. This makes our application maintainable, scalable, and secure, while also providing access to a wealth of resources and community support.
