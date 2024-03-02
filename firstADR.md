@@ -23,10 +23,42 @@ Spring MVC has high complexity to develop the applications using this pattern.
 
 # Sample Code:
 
-from django.shortcuts import render
-from .models import Product
+//model class
+public class Hello {
+    private String message;
+    public Hello(){
 
-def product_list(request):
-    products = Product.objects.all()
-    return render(request, 'products/product_list.html', {'products': products}) 
+    }
+    public Hello(String message){
+        this.message = message;
+    }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}
+//controller class
+@Controller
+public class HelloController {
+   @GetMapping("/hello")
+    public String hello(Model model){
+       Hello content = new Hello();
+       content.setMessage("Hello World");
+       model.addAttribute("message", content);
+       return "hello";
+   }
+}
+//view file
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>${message.content}</h1>
+</body>
+</html>
