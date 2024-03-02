@@ -12,20 +12,19 @@ We choose Spring MVC for my web application because it offers a mature and well-
 
 # Consequences
 
-#Pros – What becomes easier?
+# Pros – What becomes easier?
+
 It enables rapid and parallel development.
 Development of the application becomes fast.
 Easy for multiple developers to work together.
 Easier to Update the application.
 It is Easier to Debug because we have multiple levels in the application.
 
-#Cons – What becomes more difficult?
+# Cons – What becomes more difficult?
+
 Spring MVC has high complexity to develop the applications using this pattern.
 
 # Sample Code:
-
-# Sample Django view demonstrating simplicity and readability
-
 
 from django.shortcuts import render
 from .models import Product
