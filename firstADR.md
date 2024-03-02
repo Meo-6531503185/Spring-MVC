@@ -24,6 +24,7 @@ Spring MVC has high complexity to develop the applications using this pattern.
 # Sample Code:
 
 //model class
+```java
 public class Hello {
     private String message;
     public Hello(){
@@ -41,8 +42,9 @@ public class Hello {
         this.message = message;
     }
 }
-
+```
 //controller class
+```
 @Controller
 public class HelloController {
    @GetMapping("/hello")
@@ -53,7 +55,7 @@ public class HelloController {
        return "hello";
    }
 }
-
+```
 //view file
 <!DOCTYPE html>
 <html>
