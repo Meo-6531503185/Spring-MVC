@@ -57,6 +57,7 @@ public class HelloController {
 }
 ```
 //view file
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,3 +67,4 @@ public class HelloController {
     <h1>${message.content}</h1>
 </body>
 </html>
+```
