@@ -52,6 +52,7 @@ public class ApiController {
     }
 }
 ```
+View
 ```java
 <!DOCTYPE html>
 <html>
